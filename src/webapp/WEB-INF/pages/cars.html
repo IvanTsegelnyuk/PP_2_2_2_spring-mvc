@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Model</th>
+        <th>HorsePower</th>
+        <th>Price</th>
+    </tr>
+
+    <tr th:each="iter,iterStat : ${allCars}">
+        <td th:text="${iterStat.index + 1}"></td>
+        <td th:text="${iter.getModel()}"></td>
+        <td th:text="${iter.getHp()}"></td>
+        <td th:text="${iter.getPrice()}"></td>
+    </tr>
+
+
+</table>
+</body>
+</html>
